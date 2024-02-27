@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+@font-face {
+  font-family: Nunito-Bold;
+  src: url(../public/fonts/Nunito-Bold.ttf);
+}
+@font-face {
+  font-family: Nunito-BoldItalic;
+  src: url(../public/fonts/Nunito-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Nunito-ExtraBold;
+  src: url(../public/fonts/Nunito-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Nunito-ExtraBoldItalic;
+  src: url(../public/fonts/Nunito-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: Nunito-ExtraLight;
+  src: url(../public/fonts/Nunito-ExtraLight.ttf);
+}
+@font-face {
+  font-family: Nunito-ExtraLightItalic;
+  src: url(../public/fonts/Nunito-ExtraLightItalic.ttf);
+}
+@font-face {
+  font-family: Nunito-Italic;
+  src: url(../public/fonts/Nunito-Italic.ttf);
+}
+@font-face {
+  font-family: Nunito-LightItalic;
+  src: url(../public/fonts/Nunito-LightItalic.ttf);
+}
+@font-face {
+  font-family: Nunito-Regular;
+  src: url(../public/fonts/Nunito-Regular.ttf);
+}
+@font-face {
+  font-family: Nunito-SemiBold;
+  src: url(../public/fonts/Nunito-SemiBold.ttf);
+}
+@font-face {
+  font-family: Nunito-SemiBoldItalic;
+  src: url(../public/fonts/Nunito-SemiBoldItalic.ttf);
+}
+body{
+  font-family: Nunito, sans-serif;
+}

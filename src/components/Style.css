@@ -1,0 +1,70 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+
+.bd-example-modal-lg table {
+  font-size: 12px;
+}
+.bd-example-modal-lg table tr th,
+.bd-example-modal-lg table tr td {
+  padding: 5px;
+}
+table.table-sort thead tr th,
+table.table-sort tfoot tr th,
+table.table-sort-money thead tr th,
+table.table-sort-money tfoot tr th {
+  padding: 4px !important;
+}
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+.table td,
+.table th {
+  padding: 2px;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+}
+.btn-icon.rounded-circle {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+.table {
+  margin-bottom: 0;
+}
+.btn-place {
+  position: absolute;
+  right: 195px;
+  top: 15px;
+  z-index: 1;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 5px !important;
+}
+
+ /* Media Query  */
+@media (max-width:576px) {
+
+  #inventorytbl_filter{
+      float:right;
+      position:absolute;
+      right:0px;
+      top:-53px;
+      
+  }    
+  .main-content-wrap {
+      margin-top: 50px;
+  }
+  .breadcrumb {
+      
+      margin: 0 0 1.0rem;
+      
+  }
+  }
