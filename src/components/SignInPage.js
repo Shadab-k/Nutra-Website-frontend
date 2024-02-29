@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
 // import { Link } from "react-router-dom";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const SignInPage = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const handleSubmit = async (e) => {
     try {
@@ -24,8 +26,9 @@ const SignInPage = () => {
       const json = await response.json();
       console.log("json", json);
       if (json.success) {
-        localStorage.setItem("token", json.authToken);
-        navigate("/home");
+        // localStorage.setItem("token", json.authToken);
+        dispatch({type:"Auth/SET_TOKEN", payload: json.authToken})
+        // navigate("/home");
       } else {
         alert("Please Login With Correct Credentials");
       }
@@ -38,9 +41,6 @@ const SignInPage = () => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
-  // const onNavbarNavigation = () => {
-  //   navigate("/home");
-  // };
 
   return (
     <div
@@ -92,7 +92,7 @@ const SignInPage = () => {
                   </button>
                   <Link
                     className="btn btn-rounded btn-primary btn-block mt-2"
-                    to="/home"
+                    to="/"
                   >
                     Home
                   </Link>

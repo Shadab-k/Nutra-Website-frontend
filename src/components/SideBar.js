@@ -1,14 +1,17 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const SideBar = () => {
-  let navigate = useNavigate();
+  let navigate = useNavigate(); 
+  const dispatch=useDispatch()
 
   const handleOnLogout = () => {
-
-      localStorage.removeItem('token');
-      navigate("/");
-   
+    dispatch({type:"Auth/SET_TOKEN", payload:""})
+    // localStorage.removeItem("token");
+    navigate("/"); 
   };
 
   return (
@@ -21,14 +24,14 @@ const SideBar = () => {
         >
           <ul className="navigation-left">
             <li className="nav-item ">
-              <Link className="nav-item-hold " to="/home">
+              <Link className="nav-item-hold" to="/">
                 <i className="nav-icon i-Home-4"></i>
                 <span className="nav-text">Home</span>
               </Link>
               <div className="triLinkngle"></div>
             </li>
             <li className="nav-item ">
-              <Link className="nav-item-hold " to="/orders">
+              <Link className="nav-item-hold" to="/orders">
                 <i className="nav-icon i-Bar-Chart"></i>
                 <span className="nav-text">Orders</span>
               </Link>
@@ -43,9 +46,9 @@ const SideBar = () => {
             </li>
 
             <li className="nav-item " onClick={handleOnLogout}>
-              <Link className="nav-item-hold" >
+              <Link className="nav-item-hold">
                 <i className="nav-icon i-Checked-User"></i>
-                <span className="nav-text"  >Logout</span>
+                <span className="nav-text">Logout</span>
               </Link>
               <div className="triangle"></div>
             </li>

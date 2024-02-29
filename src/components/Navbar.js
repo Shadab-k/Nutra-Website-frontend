@@ -4,16 +4,14 @@ import logo from "../assets/images/logo.png";
 import SideBar from "./SideBar";
 
 const Navbar = () => {
-  const token = localStorage.getItem("token");
   return (
     <>
-
-<div className="app-admin-wrap layout-sidebar-large clearfix">
+      <div className="app-admin-wrap layout-sidebar-large clearfix">
         <div className="main-header">
           <div className="logo">
             {" "}
             {/* <Link to="/home"> </Link> */}
-            <Link to="/home">
+            <Link to="#">
               {" "}
               <img src={logo} alt="" />
             </Link>{" "}

@@ -19,7 +19,7 @@ const HomePage = () => {
             <div className="breadcrumb col-12">
               <ul>
                 <li>
-                  <Link to="/home">
+                  <Link to="/">
                     <i className="nav-icon i-Home-4"></i> Home
                   </Link>
                 </li>
