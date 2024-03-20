@@ -370,10 +370,10 @@ const OrdersPage = () => {
                               >
                                 <option> {order.payment_mode}</option>
                                 <option value="COD">Cash</option>
-                                <option value="Online">Paytm</option>
-                                <option value="Online">Phone Pay</option>
-                                <option value="Online">Google Pay</option>
-                                <option value="Online">Amazon Pay</option>
+                                <option value="Paytm">Paytm</option>
+                                <option value="Phone Pay">Phone Pay</option>
+                                <option value="Google Pay">Google Pay</option>
+                                <option value="Amazon Pay">Amazon Pay</option>
                               </select>
                             </div>
 
@@ -391,7 +391,7 @@ const OrdersPage = () => {
                               >
                                 <option>{order?.Status}</option>
                                 <option value="Delivered">Delivered</option>
-                                <option value="Undelivered">In Transit</option>
+                                <option value="Undelivered">Undelivered</option>
                               </select>
                             </div>
                           </div>

@@ -64,45 +64,45 @@ const ChangePasswordPage = () => {
               <div className="card mb-4">
                 <div className="card-body">
                   <div className="col-md-12 p-0 mt-lg-2 ">
-                    <div class="card-body">
-                      <div class="col-md-4 col-sm-8 m-auto  ">
-                        <div class="card o-hidden">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="p-4">
-                                <h1 class="mb-3 text-18">Change Password</h1>
+                    <div className="card-body">
+                      <div className="col-md-4 col-sm-8 m-auto  ">
+                        <div className="card o-hidden">
+                          <div className="row">
+                            <div className="col-md-12">
+                              <div className="p-4">
+                                <h1 className="mb-3 text-18">Change Password</h1>
                                 <form>
-                                  <div class="form-group">
-                                    <label for="email">Username</label>
+                                  <div className="form-group">
+                                    <label htmlFor="email">Username</label>
                                     <input
                                       id="username"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="text"
                                       value="Aquib.Rider"
                                       readonly=""
                                     />
                                     <input
                                       id="user_id"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="hidden"
                                       value="851"
                                       readonly=""
                                     />
                                   </div>
-                                  <div class="form-group">
-                                    <label for="email">Current Password</label>
+                                  <div className="form-group">
+                                    <label htmlFor="email">Current Password</label>
                                     <input
                                       id="old_password"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="password"
                                       value=""
                                     />
                                   </div>
-                                  <div class="form-group">
-                                    <label for="password">New Password</label>
+                                  <div className="form-group">
+                                    <label htmlFor="password">New Password</label>
                                     <input
                                       id="new_password"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="password"
                                       value=""
                                     />
@@ -110,13 +110,13 @@ const ChangePasswordPage = () => {
                                   <button
                                     id="changePassword"
                                     type="button"
-                                    class="btn btn-rounded btn-primary btn-block mt-2"
+                                    className="btn btn-rounded btn-primary btn-block mt-2"
                                   >
                                     Change Password
                                   </button>
                                 </form>
 
-                                <div class="mt-3 text-center"></div>
+                                <div className="mt-3 text-center"></div>
                               </div>
                             </div>
                           </div>
@@ -207,48 +207,48 @@ const ChangePasswordPage = () => {
           <div className="separator-breadcrumb mb-3 border-top"></div>
           <div className="row m-0 ">
             <div className="col-md-12 p-0">
-              <div class="row m-0 ">
-                <div class="col-md-12 p-0">
-                  <div class="card mb-4">
-                    <div class="card-body">
-                      <div class="col-md-4 col-sm-8 m-auto  ">
-                        <div class="card o-hidden">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="p-4">
-                                <h1 class="mb-3 text-18">Change Password</h1>
+              <div className="row m-0 ">
+                <div className="col-md-12 p-0">
+                  <div className="card mb-4">
+                    <div className="card-body">
+                      <div className="col-md-4 col-sm-8 m-auto  ">
+                        <div className="card o-hidden">
+                          <div className="row">
+                            <div className="col-md-12">
+                              <div className="p-4">
+                                <h1 className="mb-3 text-18">Change Password</h1>
                                 <form>
-                                  <div class="form-group">
-                                    <label for="email">Username</label>
+                                  <div className="form-group">
+                                    <label htmlFor="email">Username</label>
                                     <input
                                       id="username"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="text"
                                       value="Aquib.Rider"
                                       readonly=""
                                     />
                                     <input
                                       id="user_id"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="hidden"
                                       value="851"
                                       readonly=""
                                     />
                                   </div>
-                                  <div class="form-group">
-                                    <label for="email">Current Password</label>
+                                  <div className="form-group">
+                                    <label htmlFor="email">Current Password</label>
                                     <input
                                       id="old_password"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="password"
                                       value=""
                                     />
                                   </div>
-                                  <div class="form-group">
-                                    <label for="password">New Password</label>
+                                  <div className="form-group">
+                                    <label htmlFor="password">New Password</label>
                                     <input
                                       id="new_password"
-                                      class="form-control form-control-rounded"
+                                      className="form-control form-control-rounded"
                                       type="password"
                                       value=""
                                     />
@@ -256,13 +256,13 @@ const ChangePasswordPage = () => {
                                   <button
                                     id="changePassword"
                                     type="button"
-                                    class="btn btn-rounded btn-primary btn-block mt-2"
+                                    className="btn btn-rounded btn-primary btn-block mt-2"
                                   >
                                     Change Password
                                   </button>
                                 </form>
 
-                                <div class="mt-3 text-center"></div>
+                                <div className="mt-3 text-center"></div>
                               </div>
                             </div>
                           </div>

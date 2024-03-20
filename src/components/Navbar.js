@@ -5,90 +5,79 @@ import SideBar from "./SideBar";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  const [data, setData] = useState([]);
+  const [name, setName] = useState(""); 
   const token = useSelector((state) => state.AuthSlice.token);
-  const dataFromApi = async () => {
-    const response = await fetch("http://localhost:5000/api/getuser", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "auth-token": `Bearer ${token}`,
-      },
-      // body: JSON.stringify({ data }),
-    });
 
-    const resp = await response.json();
-    setData(resp);
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/getuser", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": `Bearer ${token}`,
+        },
+      });
+      const responseData = await response.json();
+      setName(responseData.name); 
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   useEffect(() => {
-    dataFromApi();
-  }, [token]);
+    fetchData();
+  }); 
 
-  console.log("Data fected", data);
   return (
     <>
       <div className="text-left">
-        {data.map((user) => {
-          return (
-            <div
-              className="app-admin-wrap layout-sidebar-large clearfix"
-              key={user?.id}
-            >
-              <div className="main-header">
-                <div className="logo">
-                  {" "}
-                  {/* <Link to="/home"> </Link> */}
-                  <Link to="#">
-                    {" "}
-                    <img src={image} alt="" title="Nirvasa" />
-                  </Link>{" "}
-                </div>
+        <div className="app-admin-wrap layout-sidebar-large clearfix">
+          <div className="main-header">
+            <div className="logo">
+              {/* <Link to="/home"> </Link> */}
+              <Link to="#">
+                <img src={image} alt="" title="Nirvasa" />
+              </Link>
+            </div>
 
-                <div style={{ margin: "auto" }}></div>
-                <div className="header-part-right">
-                  {/* <!-- Full screen toggle -->  */}
-                  <i
-                    className="i-Full-Screen header-icon d-none d-sm-inline-block"
-                    data-fullscreen=""
-                  ></i>
+            <div style={{ margin: "auto" }}></div>
+            <div className="header-part-right">
+              {/* <!-- Full screen toggle --> */}
+              <i
+                className="i-Full-Screen header-icon d-none d-sm-inline-block"
+                data-fullscreen=""
+              ></i>
 
-                  {/* <!-- User avatar dropdown --> */}
-                  <div
-                    className="badge-top-container"
-                    role="button"
-                    id="dropdownNotification"
-                    data-toggle="dropdown"
-                    aria-haspopup="false"
-                    aria-expanded="false"
-                  >
-                    {" "}
-                    <Link to="#" className="text-muted mr-4">
-                      {" "}
-                      <i className="nav-icon i-Administrator"></i> Welcome{" "}
-                      {user?.name}
-                    </Link>{" "}
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-center">
-                  {/* <!-- Mega menu -->  */}
-                  <div className="menu-toggle">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                  {/* <!-- / Mega menu -->  */}
-                </div>
+              {/* <!-- User avatar dropdown --> */}
+              <div
+                className="badge-top-container"
+                role="button"
+                id="dropdownNotification"
+                data-toggle="dropdown"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <Link to="#" className="text-muted mr-4">
+                  <i className="nav-icon i-Administrator"></i> Welcome {name}
+                </Link>
               </div>
             </div>
-          );
-        })}
+
+            <div className="d-flex align-items-center">
+              {/* <!-- Mega menu --> */}
+              <div className="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              {/* <!-- / Mega menu --> */}
+            </div>
+          </div>
+        </div>
 
         {/* SideBar Component */}
         <SideBar />
       </div>
-      ;
     </>
   );
 };
