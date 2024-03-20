@@ -1,20 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    // <!-- Footer Start -->
-    <>    <div className="flex-grow-1"></div>
-    
-    
-    <div className="d-flex align-items-center row"> 
-          <div className="align-middle m-auto pt-2  align-items-baseline">
-          <p className="m-0">© 2019 Nutrafirst Affiliate </p>
-            <p className="m-0">All rights reserved</p>
-          </div>
+    // <!-- Footer Component -->
+    <>
+      {" "}
+      <div className="flex-grow-1"></div>
+      <div className="d-flex align-items-center row">
+        <div className="align-middle m-auto pt-2  align-items-baseline">
+          <p className="m-0">© 2024 Nirvasa </p>
+          <p className="m-0">All rights reserved</p>
         </div>
-        </>
-
-  )
-}
-
-export default Footer
+      </div>
+    </>
+  );
+};
+export default Footer;

@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import logo from "../assets/images/logo.png";
-// import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
+import image from "../assets/images/image.png";
 import { useDispatch } from "react-redux";
 
 const SignInPage = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-  // let navigate = useNavigate();
   const dispatch = useDispatch()
 
   const handleSubmit = async (e) => {
@@ -55,7 +52,7 @@ const SignInPage = () => {
             <div className="col-md-12">
               <div className="p-4">
                 <div className=" text-center mb-4">
-                  <img src={logo} alt="" />
+                  <img src={image} alt="" title="Nutrafirst" />
                 </div>
                 <h1 className="mb-3 text-18">Sign In</h1>
                 <form onSubmit={handleSubmit}>
@@ -86,16 +83,9 @@ const SignInPage = () => {
                   <button
                     type="submit"
                     className="btn btn-rounded btn-primary btn-block mt-2"
-                    // onClick={onNavbarNavigation}
                   >
                     Sign In
                   </button>
-                  <Link
-                    className="btn btn-rounded btn-primary btn-block mt-2"
-                    to="/"
-                  >
-                    Home
-                  </Link>
                   {/* <Link
                
                     className="btn btn-rounded btn-primary btn-block mt-2"
@@ -104,17 +94,14 @@ const SignInPage = () => {
                   >
                     Home Page
                   </Link> */}
-                  {/* <div
-                    class="field-group form-group m-t-20"
-                    style={{margintop:"20px !important"}}
-                  >
-                    <input type="checkbox" name="remember" id="remember" />
-                    <label for="remember-me">Remember me</label>
-                  </div> */}
+                  <div className="form-group mt-xl-3 align-items-center d-flex">
+                    <input type="checkbox"  name="remember" id="remember" />
+                    <label for="remember-me" className="ml-xl-2 mb-0">Remember me</label>
+                  </div>
                 </form>
-                {/* <div class="mt-3 text-center">
+                <div className="mt-3 text-center">
                   <a href="forgot_password.php">Forgot Your Password?</a>
-                </div> */}
+                </div>
 
                 <div className="mt-3 text-center"></div>
               </div>

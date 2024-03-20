@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+<title>Nirvasa | Partner Dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="assets/styles/css/themes/lite-purple.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/styles/vendor/daterangepicker.css" />
+<link rel="stylesheet" type="text/css" href="assets/styles/vendor/datatables.min.css" />
+
+</head>
+
+<body class="text-left">
+
+<!-- Pre Loader Strat  -->
+<div class="loadscreen" id="preloader">
+  <div class="loader spinner-bubble spinner-bubble-primary"> </div>
+</div>
+<!-- Pre Loader end  --> 
+
+<!-- ============ Compact Layout start ============= --> 
+<!-- ============Deafult  Large SIdebar Layout start ============= -->
+
+<div class="app-admin-wrap layout-sidebar-large clearfix">
+  <div class="main-header">
+    <div class="logo">  <a href="index.php"> <img src="assets/images/logo.png" alt=""></a> </div>
+   
+   
+    <div style="margin: auto"></div>
+    <div class="header-part-right"> 
+      <!-- Full screen toggle --> 
+      <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i> 
+      
+      <!-- User avatar dropdown -->
+      <div class="badge-top-container" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <a href="" class="text-muted mr-4"> <i class="nav-icon i-Administrator"></i> Welcome Aquib.Rider</a> </div>
+    </div>
+    
+     <div class="d-flex align-items-center"> 
+      <!-- Mega menu --> 
+       <div class="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+      <!-- / Mega menu --> 
+      
+    </div>
+    
+    
+  </div>
+  <!-- header top menu end -->
+  
+   
+  <!--=============== Left side End ================--> 
+  
+  
+  <div class="side-content-wrap">
+            <div class="sidebar-left open rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
+                  <ul class="navigation-left">
+                
+                <li class="nav-item " >
+                        <a class="nav-item-hold " href="index.php">
+                            <i class="nav-icon i-Home-4"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                <li class="nav-item " >
+                        <a class="nav-item-hold " href="orders.php">
+                            <i class="nav-icon i-Bar-Chart"></i>
+                            <span class="nav-text">Orders</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Library"></i>
+                            <span class="nav-text">Inventory</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>-->
+                     <li class="nav-item " >
+                        <a class="nav-item-hold" href="change_password.php">
+                            <i class="nav-icon i-Password"></i>
+                            <span class="nav-text">Change Password</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                        <li class="nav-item " >
+                        <a class="nav-item-hold" href="api_handler.php?action=logout">
+                            <i class="nav-icon i-Checked-User"></i>
+                            <span class="nav-text">Logout</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
+                <!-- Submenu Dashboards -->
+               
+               
+               
+               
+             
+            </div>
+            <div class="sidebar-overlay"></div>
+        </div>
+?> 
+  <!-- ============ Body content start ============= -->
+  <div class="main-content-wrap sidenav-open not-found-wrap text-center">
+    <div class="main-content ">
+      <div class="row m-0">
+        <div class="breadcrumb col-12">
+          <ul>
+          <li><a href="index.php"><i class="nav-icon i-Home-4"></i> Home</a></li>
+            <li><a href="#">FE</a></li>
+            
+          </ul>
+        
+        </div>
+      </div>
+      <div class="separator-breadcrumb mb-3 border-top"></div>
+      <div class="row align-items-center  ">
+      <div class="col-md-5 pt-5 d-flex m-auto">
+        <div class="col-md-6"><a href="orders.php"><div class="card card-ecommerce-1 mb-4 pb-2 pt-3 "><div class="card-body text-center"><i class="i-Jet mb-3"></i><h5 class="text-primary">Orders</h5></div></div></a></div>
+        
+        
+        
+        <!--<div class="col-md-6 "><a href="inventory.html"><div class="card card-ecommerce-1 mb-4 pb-2 pt-3 "><div class="card-body text-center"><i class="i-Receipt-3 mb-3"></i><h5 class="text-primary"> Inventory</h5></div></div></a></div>-->
+        </div>
+    </div>
+
+    
+    <!-- Footer Start -->
+           
+    <!-- Footer Start -->
+    <div class="flex-grow-1"></div>
+    
+    
+    <div class="d-flex align-items-center row"> 
+          <div class="align-middle m-auto pt-2  align-items-baseline">
+            <p class="m-0">&copy; 2024 Nirvasa </p>
+            <p class="m-0">All rights reserved</p>
+          </div>
+        </div>    <!-- fotter end --> 
+    
+  
+  </div>
+  <!-- ============ Body content End ============= --> 
+</div>
+<!--=============== End app-admin-wrap ================--> 
+</div>
+
+<!-- ============ Large Sidebar Layout End ============= --> 
+
+
+
+<script src="assets/js/common-bundle-script.js"></script> 
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+
+<script src="assets/js/es5/script.min.js"></script> 
+
+<script type="text/javascript" src="assets/js/moment.min.js"></script> 
+
+<script type="text/javascript" src="assets/js/datatables.script.min.js"></script> 
+
+<script type="text/javascript" src="assets/js/datatables.min.js"></script> 
+
+<script type="text/javascript">
+
+$(function() {
+
+
+
+    var start = moment().subtract(29, 'days');
+
+    var end = moment();
+
+
+
+    function cb(start, end) {
+
+        $('#reportrange span').html(start.format('D MMMM , YYYY') + ' - ' + end.format('D/MMM/YYYY'));
+
+    }
+
+
+
+    $('#reportrange').daterangepicker({
+
+        startDate: start,
+
+        endDate: end,
+
+        ranges: {
+
+           'Today': [moment(), moment()],
+
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+
+        }
+
+    }, cb);
+
+
+
+    cb(start, end);
+
+
+
+});
+
+ function updateStatus(bolt_order_id,id) {
+
+       var bolt_order_id1 = $('#status_bolt_order_id'+bolt_order_id).val();
+
+    var payment_mode = $('#payment_mode'+bolt_order_id).val(); 
+
+    var remark = $('#remark'+bolt_order_id).val();
+
+    var order_status = $('#order_status'+bolt_order_id).val();
+
+    var reason = $('#reason'+bolt_order_id).val();
+
+    var id = $('#status_user_id'+bolt_order_id).val();
+
+    
+
+ /*   alert(bolt_order_id1);
+
+    alert(payment_mode);
+
+    alert(remark);
+
+    alert(order_status);
+
+    alert(reason);
+
+    alert(id);
+
+    return false;*/
+
+   if(order_status==19) {
+
+    if(payment_mode=='- Select -') {
+
+      alert('Please select payment mode');
+
+      return false;
+
+        
+
+    };
+
+   }
+
+     if(order_status=='- Select -') {
+
+      alert('Please select order status');
+
+      return false;
+
+        
+
+    };
+
+    var data = {bolt_order_id: bolt_order_id1,payment_mode:payment_mode,remark:remark,order_status:order_status,reason:reason,id:id};
+
+      var action = "update_status";
+
+      url = 'api_handler.php';
+
+      // AJAX request
+
+      $.ajax({
+
+          url: url,
+
+          type: 'post',
+
+          data: {
+
+              action: action,
+
+              data: data
+
+          },
+
+          success: function (result) {    
+
+               if (result.trim() == 200) {
+
+                  alert("Order status updated successfully!"); 
+
+                  location.reload();
+
+                } else {
+
+                    alert("There is some problem to save the user!");
+
+                }
+
+          },
+
+          error: function (result) {
+
+              alert("There is some problem to save the user!");
+
+          }
+
+      });    
+
+    
+
+ }
+
+ 
+
+ function showReason(id,bolt_order_id) {
+
+     if(id!=20){
+
+        $('#undelivered_reason'+bolt_order_id).html('');
+
+        return false;
+
+     }
+
+     var action = "get_undelivered_reason";
+
+      url = 'api_handler.php';
+
+      // AJAX request
+
+      $.ajax({
+
+          url: url,
+
+          type: 'post',
+
+          data: {
+
+              action: action,
+
+              bolt_order_id: bolt_order_id
+
+          },
+
+          success: function (result) { //alert(result); return false;   
+
+               $('#undelivered_reason'+bolt_order_id).html(result);
+
+          },
+
+          error: function (result) {
+
+              alert("There is some problem to save the user!");
+
+          }
+
+      });
+
+ }
+
+</script> 
+
+
+</body>
+
+</html>
