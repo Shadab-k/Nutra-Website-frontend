@@ -94,7 +94,9 @@ const OrdersPage = () => {
   const handleOnPaymentSelect = (e) => {
     setOrder({ ...order, payment_mode: e.target.value });
   };
-
+  const handleOnReasonSelect = (e) => {
+    setOrder({ ...order, reason: e.target.value });
+  };
   const handleOnOrderSelect = (e) => {
     setOrder({ ...order, Status: e.target.value });
   };
@@ -230,7 +232,58 @@ const OrdersPage = () => {
                     </span>{" "}
                   </button>
                 </div>
+
                 <div className="modal-body">
+                  <form onSubmit={handleSubmit}>
+                    <div className="col-md-12 p-0">
+                      <div className=" card  mb-3">
+                        <div className="card-body">
+                          <div className="row ">
+                            <div className="col-md-12 row m-0  form-group ">
+                              <label
+                                for="proqty"
+                                className="pl-1 col-sm-2 pb-0 col-form-label text-left"
+                              >
+                                Address
+                              </label>
+                              <label
+                                name="eaddress"
+                                id="address"
+                                className="form-control-rounded pl-1 pb-0 col-form-label text-left"
+                              >
+                                {" "}
+                                {order?.address}
+                                <br />
+                                {/* Test
+                        <br />, Bareilly, Uttar Pradesh
+                        <br />0 */}
+                              </label>
+                            </div>
+                          </div>
+
+                          <div className="row">
+                            <div className="col-md-6 row m-0  form-group ">
+                              <label
+                                for="primaryno"
+                                className="pl-1 pb-0 col-form-label text-left"
+                              >
+                                {" "}
+                                Primary <i className="i-Telephone"></i>{" "}
+                              </label>
+                              <label
+                                className="readonly form-control-rounded pl-1 pb-0 col-form-label"
+                                value="XXXXX9050"
+                                name="emobile_num"
+                                id="primaryno"
+                              >
+                                <Link href="#"> {order?.mobile_num}</Link>
+                              </label>
+                            </div>
+                          </div>
+
+                          {/*  */}
+
+                          {/* <div className="modal-body">
                   <form onSubmit={handleSubmit}>
                     <div className="col-md-12 p-0">
                       <div className="card mb-3">
@@ -303,7 +356,7 @@ const OrdersPage = () => {
                                 {order?.alt_mobile_num}
                               </label>
                             </div>
-                          </div>
+                          </div> */}
 
                           <div className="row m-0">
                             <div className="col-md-12 p-0">
@@ -318,15 +371,75 @@ const OrdersPage = () => {
                                         <thead>
                                           <tr role="row">
                                             <th> Product Name</th>
-                                            <th> Qty </th>
-                                            <th> Amount</th>
+                                            <th> SKU </th>
+                                            <th> Qty</th>
                                           </tr>
                                         </thead>
-                                        <tbody>
-                                          <tr role="row" className="odd">
+                                        {/* <tbody>
+                                          <tr
+                                            role="row"
+                                            className="odd"
+                                            style={{
+                                              backgroundColor:
+                                                "rgba(0,0,0,.05)",
+                                            }}
+                                          >
                                             <td>{order?.product_name}</td>
                                             <td>{order?.qty}</td>
-                                            <td>{order?.COD_Amt}</td>
+                                            {/* <td>{order?.COD_Amt}</td> 
+                                            <td></td>
+
+                                            <td>
+                                              <strong
+                                                style={{ fontSize: "12px" }}
+                                              >
+                                                Payable Amount 
+                                              </strong>
+                                            </td>
+
+                                            <td>
+                                              <strong
+                                                style={{ fontSize: "12px" }}
+                                              >
+                                               {order?.COD_Amt}
+                                              </strong>
+                                            </td>
+                                          </tr>
+                                        </tbody> */}
+                                        <tbody>
+                                          {" "}
+                                          <tr role="row" className="odd">
+                                            <td>{order?.product_name}</td>
+
+                                            <td>NFINAL02</td>
+
+                                            <td>{order?.qty}</td>
+                                          </tr>
+                                          <tr
+                                            role="row"
+                                            className="odd"
+                                            style={{
+                                              backgroundColor:
+                                                "rgba(0,0,0,.05)",
+                                            }}
+                                          >
+                                            <td></td>
+
+                                            <td>
+                                              <strong
+                                                style={{ fontSize: "12px" }}
+                                              >
+                                                Payable Amount
+                                              </strong>
+                                            </td>
+
+                                            <td>
+                                              <strong
+                                                style={{ fontSize: "12px" }}
+                                              >
+                                                {order?.COD_Amt}
+                                              </strong>
+                                            </td>
                                           </tr>
                                         </tbody>
                                       </table>
@@ -369,7 +482,7 @@ const OrdersPage = () => {
                                 value={order.payment_mode}
                               >
                                 <option> {order.payment_mode}</option>
-                                <option value="COD">Cash</option>
+                                <option value="Cash">Cash</option>
                                 <option value="Paytm">Paytm</option>
                                 <option value="Phone Pay">Phone Pay</option>
                                 <option value="Google Pay">Google Pay</option>
@@ -397,8 +510,8 @@ const OrdersPage = () => {
                           </div>
 
                           <div className="row m-0 mb-2">
-                            <div className="col-md-6 row m-0 form-group">
-                              <div className="col-md-4 pl-0 col-sm-4">
+                            <div className="col-md-6 row m-0 form-group ">
+                              <div className="col-md-4 pl-0  col-sm-4">
                                 <label
                                   htmlFor="remark"
                                   className="pl-1 pb-0 col-form-label"
@@ -417,27 +530,59 @@ const OrdersPage = () => {
                                 ></textarea>
                               </div>
                             </div>
-
-                            {/* <div className="col-md-6 row m-0 form-group">
-                              <div className="col-md-4 pl-0 col-sm-4">
-                                <label
-                                  htmlFor="reason"
-                                  className="pl-1 pb-0 col-form-label"
-                                >
-                                  Reason
-                                </label>
-                              </div>
-
-                              <div className="col-md-8 col-sm-8 p-0">
-                                <textarea
-                                  name="reason"
-                                  id="reason"
+                            {order.Status === "Undelivered" && (
+                              <div
+                                className="col-md-3 col-sm-8 p-0 "
+                                id="reason"
+                              >
+                                <select
                                   className="form-control form-control-rounded"
-                                  onChange={onChange}
-                                  value={order.reason}
-                                ></textarea>
+                                  // name="reason"
+                                  // id="reason"
+                                  value={order?.reason}
+                                  onChange={handleOnReasonSelect}
+                                >
+                                  <option>{order?.reason}</option>
+                                  <option value="Customer Not Available at Address">
+                                    Customer Not Available at Address
+                                  </option>
+                                  <option value="Customer Refused To Accept">
+                                    Customer Refused To Accept
+                                  </option>
+                                  <option value="Incomplete Address">
+                                    Incomplete Address
+                                  </option>
+                                  <option value="ODA (Out of Delivery Area)">
+                                    ODA (Out of Delivery Area)
+                                  </option>
+                                  <option value="Customer Out of Station">
+                                    Customer Out of Station
+                                  </option>
+                                  <option value="Future Delivery">
+                                    Future Delivery
+                                  </option>
+                                  <option value="COD Not Ready">
+                                    COD Not Ready
+                                  </option>
+                                  <option value="Order Already Cancelled">
+                                    Order Already Cancelled
+                                  </option>
+                                  <option value="Not Connected (Ringing, Switched Off, Not Reachable)">
+                                    Not Connected (Ringing, Switched Off, Not
+                                    Reachable)
+                                  </option>
+                                  <option value="Product Mismatch">
+                                    Product Mismatch
+                                  </option>
+                                  <option value="Amount Mismatch">
+                                    Amount Mismatch
+                                  </option>
+                                  <option value="Fake Order">Fake Order</option>
+                                </select>
                               </div>
-                            </div> */}
+
+                              // {/*  */}
+                            )}
                           </div>
 
                           <div className="modal-footer">

@@ -6,6 +6,7 @@ import OrdersPage from "../components/OrdersPage";
 import { useSelector } from "react-redux";
 import "../App.css";
 import ChangePasswordPage from "../components/ChangePasswordPage";
+import UpdatedOrdersPage from "../components/UpdatedOrdersPage";
 
 export default function Routers() {
   const { token } = useSelector((state) => state.AuthSlice);
@@ -22,6 +23,7 @@ export default function Routers() {
               <Route path="/" element={<HomePage />} />
               <Route path="/orders" element={<OrdersPage />} />
               <Route path="/changepassword" element={<ChangePasswordPage />} />
+              <Route path="/update" element={<UpdatedOrdersPage />} />
             </Route>
           )}
         </Routes>

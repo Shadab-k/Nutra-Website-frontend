@@ -18,7 +18,7 @@ const Navbar = () => {
         },
       });
       const responseData = await response.json();
-      setName(responseData.name); 
+      setName(responseData.username); 
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="main-header">
             <div className="logo">
               {/* <Link to="/home"> </Link> */}
-              <Link to="#">
+              <Link to="/update">
                 <img src={image} alt="" title="Nirvasa" />
               </Link>
             </div>
